@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!--
+* @file index.html
+*
+* Template application that shows examples of how to access
+* device services from JavaScript using the Wormhole library.
+-->
+<html>
+	<head>
+		<meta name="viewport" content="width=320, user-scalable=no">
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<title>Wormhole Template App</title>
+		<link rel="stylesheet" href="style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+		<script type="text/javascript" charset="utf-8" src="js/wormhole.js"></script>
+		<script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+		<script src="js/FastClick.js"></script>
+		<script type="text/javascript">
+
+		function hide(t){
+			setInterval(function(){
+				t=t+1;
+				if(t==2){
+					$("#page1").css("opacity","0");
+				}
+				else if(t==4){
+					$("#page1").hide();
+					$("#page2").show();
+				}
+			},1000)
+		}
+
+
+		$(document).ready(function(){
+			$("#page2,#page3").hide();
+					
+			hide(0);
+			$("#page1").css("opacity","1");
+			$("#b").click(function(){
+				$("#page2").hide();
+				$("#page3").show();
+			})
+
+			$("#btnBack").click(function(){
+				$("#page3").hide();
+				$("#page2").show();
+			})
+			
+		})	
+			
+			
+			
+			
+	
+
+		</script>
+	</head>
+<body onload="initFastButtons();">
+<span id="fastclick">
+		 <div id="page1">
+		
+			<div id="logo"><center><img src="image/logo.png"></center></div>
+		
+		 </div>
+		 <div id="page2">
+			<div id="header"><img src="image/b.png"><div id="header_desc">&nbsp;&nbsp;&nbsp;&nbsp;KISWAHILI<br><i><center>for</center></i><span id="right">FOREIGNERS</span></div></div>
+			<hr>
+			<div id="icon_bar"><b>&nbsp;&nbsp;&nbsp;MATUNDAAPP</b><span id="menu_icon"><img src="image/m2.png" width="100%" height="80%"></span></div>
+			<div id="center1" class="center1">
+			<div id="p1">
+<div>A</div><div id="b">B</div><div>C</div><div>D</div><div>E</div><div>F</div><div>G</div><div>H</div><div>I</div><div>J</div><div>K</div><div>L</div><div>M</div><div>N</div><div>O</div><div>P</div>
+			</div>
+			<div id="p2">
+<div>Q</div><div id="b">R</div><div>S</div><div>T</div><div>U</div><div>V</div><div>W</div><div>X</div><div>Y</div><div>Z</div>
+
+
+			</div>
+			
+			
+			</div>
+
+			<div id="footer">
+				<div id="next"><div id="btnNext">next</div></div>
+				<div id="rundo"><center><img src="image/f1.png" width="100%"></center></div>
+			</div>
+		 </div>
+
+
+
+
+
+		<div id="page3">
+			<div id="header"><img src="image/b.png"><div id="header_desc">&nbsp;&nbsp;&nbsp;&nbsp;KISWAHILI<br><i><center>for</center></i><span id="right">FOREIGNERS</span></div></div>
+			<hr>
+			<div id="icon_bar"><b>&nbsp;&nbsp;&nbsp;MATUNDAAPP</b><span id="menu_icon"><img src="image/m2.png" width="100%" height="80%"></span></div>
+			<div id="center">
+				<div id="letter_title">
+					Fruits Starts With Lette: B
+				</div>
+				<div id="fruit_list">
+				
+					<div id="scroller">
+					<div id="item">
+						<div id="image"><img src="image/ndizi.png"></div>
+						<div id="detail">
+						
+							<div>Banana<img src="image/s3.png" width="30px" height="30px"></div> 						
+							<div>Pronounciation: ndizi</div>
+						</div>
+					</div>
+					<div id="item">
+						<div id="image"><img src="image/zabibu.png"></div>
+						<div id="detail">
+						
+							<div>Zabibu<img src="image/s3.png" width="30px" height="30px"></div> 						
+							<div>Pronounciation: zabibu</div>
+						</div>
+					</div>
+					<div id="item">
+						<div id="image"><img src="image/bilimbi.jpg"></div>
+						<div id="detail">
+						
+							<div>Bilimbi<img src="image/s3.png" width="30px" height="30px"></div> 						
+							<div>Pronounciation: mbirimbi</div>
+						</div>
+					</div>
+					</div>
+				</div>
+
+			</div>
+			<div id="footer">
+				<div id="next"><div id="btnBack">back</div></div>
+				<div id="rundo"><center><img src="image/f1.png" width="100%"></center></div>
+			</div>
+		 </div>
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 <script type="text/javascript" src="js/touchScroll.js"></script>
+
+		<script type="text/javascript">
+
+
+		var t1=new TouchScroll({id:'fruit_list','width':2,'opacity':0.5,color:'red',minLength:4});
+
+		</script>
+				 
+				 
+		 </span>
+	</body>
+</html>
